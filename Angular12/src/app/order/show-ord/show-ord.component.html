@@ -1,0 +1,33 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Order Date</th>
+            <th>Shipped Date</th>
+            <th>Ship Name</th>
+            <th>Ship Address</th>
+            <th>Ship City</th>
+            <th>Product Name</th>
+            <th>Supplier Company Name</th>
+            <th>Supplier Contact Name</th>
+            <th>Product Category Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of OrderList">
+            <td>{{dataItem.OrderDate}}</td>
+            <td>{{dataItem.ShippedDate}}</td>
+            <td>{{dataItem.ShipName}}</td>
+            <td>{{dataItem.ShipAddress}}</td>
+            <td>{{dataItem.ShipCity}}</td>
+            <td>{{dataItem.ProductName}}</td>
+            <td>{{dataItem.CompanyName}}</td>
+            <td>{{dataItem.ContactName}}</td>
+            <td>{{dataItem.CategoryName}}</td>
+
+            <!-- <td>
+                <button type="button" class="btn btn-light mr-1"
+                (click)="deleteClick(dataItem)">Delete</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>

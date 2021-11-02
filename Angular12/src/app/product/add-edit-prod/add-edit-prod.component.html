@@ -1,0 +1,65 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">Product Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="ProductName"
+        placeholder="Enter Product Name" mgModel required>
+    </div>
+
+    <label class="col-sm-2 col-form-label">Supplier</label>
+    <div class="col-sm-10">
+        <select [(ngModel)]="SupplierId" class="form-select" (change)="onSelectSupp($event)" aria-label="Default select example">
+            <option selected>Select supplier</option>
+            <option *ngFor="let dataItem of SupplierList" [ngValue]="dataItem.SupplierId">{{dataItem.CompanyName}}</option>
+        </select>
+    </div>
+
+    <label class="col-sm-2 col-form-label">Category</label>
+    <div class="col-sm-10">
+        <select [(ngModel)]="CategoryId" class="form-select" (change)="onSelectCategory($event)" aria-label="Default select example">
+            <option selected>Select category</option>
+            <option *ngFor="let dataItem of CategoryList" [ngValue]="dataItem.CategoryId">{{dataItem.CategoryName}}</option>
+        </select>
+    </div>
+
+    <label class="col-sm-2 col-form-label">Quantity per unit</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="QuantityPerUnit"
+        placeholder="Enter Quantity">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Unit price</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="UnitPrice"
+        placeholder="Enter price">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Units in stock</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="UnitsInStock"
+        placeholder="Enter Units In Stock">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Units on Order</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="UnitsOnOrder"
+        placeholder="Enter Units on Ordere">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Reorder level</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="ReorderLevel"
+        placeholder="Enter Reorder level">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Discontinued</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="Discontinued"
+        placeholder="Enter Discontinued">
+    </div>
+
+</div>
+
+<button (click)="addProduct()" *ngIf="prod.ProductId==0" class="btn btn-primary float-right" >
+    Add
+</button>

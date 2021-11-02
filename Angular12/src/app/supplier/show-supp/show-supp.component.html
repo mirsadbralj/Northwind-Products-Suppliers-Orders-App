@@ -1,0 +1,26 @@
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Company Name</th>
+            <th>Contact Name</th>
+            <th>Contact Title</th>
+            <th>Adress</th>
+            <th>Country</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let dataItem of SupplierList">
+            <td>{{dataItem.CompanyName}}</td>
+            <td>{{dataItem.ContactName}}</td>
+            <td>{{dataItem.ContactTitle}}</td>
+            <td>{{dataItem.Address}}</td>
+            <td>{{dataItem.Country}}</td>
+            <td>
+                <button type="button" class="btn btn-light mr-1"
+                (click)="deleteClick(dataItem)">Delete</button>
+            </td>
+        </tr>
+        
+    </tbody>
+</table>
