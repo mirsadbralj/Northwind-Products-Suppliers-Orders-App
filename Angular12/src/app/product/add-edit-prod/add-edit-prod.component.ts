@@ -17,14 +17,14 @@ export class AddEditProdComponent implements OnInit {
   SelectedItem:number=0;
 
   ProductId:number=0;
-  SupplierId:number=0;
-  CategoryId:number=0;
+  SupplierId?:number;
+  CategoryId?:number;
   ProductName:string="";
   QuantityPerUnit:string="";
-  UnitPrice:number=0;
-  UnitsInStock:number=0;
-  UnitsOnOrder:number=0;
-  ReorderLevel:number=0;
+  UnitPrice?:number;
+  UnitsInStock?:number;
+  UnitsOnOrder?:number;
+  ReorderLevel?:number=0;
   Discontinued:boolean=false;
   ngOnInit(): void {
     this.service.getSuppList().subscribe(data=>{
